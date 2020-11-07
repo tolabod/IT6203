@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "module11Solution"
+    }
+  },
+  "defaultProject": "module11Solution",
+  "cli": {
+    "analytics": "918edfcb-99d3-417e-b243-d3cad6519600"
+  }
 }
