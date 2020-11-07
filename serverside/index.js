@@ -91,4 +91,30 @@ app.delete('/patients/removePatient/:id', (req, res, next) => {
         })
 })
 
+app.put('/patients/updatePatient/:id', (req, res, next) => {
+  // Patient.update
+  console.log("ID:" + req.params.id)
+
+  if (mongoose.isValidObjectId(req.params.id)) {
+    Patient.findOneAndUpdate({_id: req.params.id},
+      {$set: {
+        name: req.body.name,
+        address: req.body.address,
+        phoneNumber: req.body.phoneNumber,
+        nextOfKin: req.body.nextOfKin,
+        numOfNOK: req.body.numOfNOK
+      }}, {new: true}
+    )
+      .then((patient) => {
+        if (patient)
+          console.log(patient);
+        else
+          console.log('No data exist for this ID');
+      })
+      .catch((err) => console.log(err))
+  } else {
+    console.log("Invalid Id")
+  }
+})
+
 module.exports = app;

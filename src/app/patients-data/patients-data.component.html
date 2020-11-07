@@ -1,0 +1,26 @@
+<!--<p>patients-data works!</p>-->
+
+<div class="w-100 d-flex">
+  <table class="table w-100">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" class="text-capitalize">Fullname</th>
+      <th scope="col" class="text-capitalize">Address</th>
+      <th scope="col" class="text-capitalize">Phone Number</th>
+      <th scope="col" class="text-capitalize">Next of Kin</th>
+      <th scope="col" class="text-capitalize">Number of NOK</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let patient of patients let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{patient.name}}</td>
+      <td>{{patient.address}}</td>
+      <td>{{patient.phoneNumber}}</td>
+      <td>{{patient.nextOfKin}}</td>
+      <td>{{patient.numOfNOK}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

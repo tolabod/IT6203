@@ -1,0 +1,35 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px !important;
+}
+
+.menu-item {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+}
+
+
+.menu-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+}
+
+.menu {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

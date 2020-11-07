@@ -531,23 +531,54 @@
 
 
 <div class="d-block w-100">
-  <div class="d-flex align-items-center" style="height: 100px">
+  <div class="header-container">
     <div class="container d-flex">
       <div class="row w-100">
-<!--        Header Logo Place holder-->
+<!--        Header Logo-->
         <div class="col-sm-4 w-100">
-          <div class="w-100 h-100">
-            <img src="assets/images/icon/logo_transparent.png" class="logo">
+          <div class="w-100 h-100 d-flex justify-content-center">
+            <img src="assets/images/icon/logo_transparent.png" class="logo d-flex">
           </div>
         </div>
 
-<!--        Navigation Bar Placeholder-->
+<!--        Navigation Bar-->
         <div class="col-sm-7 w-100">
-          <h4>Navigation Menu</h4>
+          <div class="container d-flex justify-content-center align-items-center w-100 h-100">
+
+            <div class="m-auto">
+              <a href="#" class="menu-item">home</a>
+            </div>
+
+            <div class="m-auto">
+              <a href="#" class="menu-item">about us</a>
+            </div>
+
+            <div class="m-auto">
+              <a href="#" class="menu-item">contact us</a>
+            </div>
+
+            <div class="m-auto">
+              <a href="#" class="menu-item">Home</a>
+            </div>
+
+            <div class="m-auto">
+              <a href="#" class="menu-item">Home</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<router-outlet></router-outlet>
+  <div class="menu-container">
+
+<!--    Grid Navigation-->
+    <div class="menu">
+      <app-navigation-menu></app-navigation-menu>
+    </div>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

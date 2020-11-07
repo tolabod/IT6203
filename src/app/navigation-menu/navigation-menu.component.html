@@ -1,1 +1,28 @@
-<p>navigation-menu works!</p>
+<div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    <span>Menu Options</span>
+  </button>
+
+  <mat-menu #menu="matMenu" class="pl-5">
+    <button mat-menu-item>
+      <span class="text-capitalize">Find Patient</span>
+    </button>
+
+    <button mat-menu-item routerLink="/patients">
+      <span class="text-capitalize">list all patients</span>
+    </button>
+
+    <button mat-menu-item routerLink="/addPatient">
+      <span class="text-capitalize">add new patient</span>
+    </button>
+
+    <button mat-menu-item routerLink="/updateRecords">
+      <span class="text-capitalize">update patient record</span>
+    </button>
+
+    <button mat-menu-item routerLink="/deletePatient">
+      <span class="text-capitalize">delete patient record</span>
+    </button>
+  </mat-menu>
+</div>
