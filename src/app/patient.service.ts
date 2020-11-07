@@ -23,7 +23,7 @@ export class PatientService {
       .subscribe((responseData) => {
         console.log(responseData);
       });
-    // location.reload();
+    location.reload();
   }
 
 
