@@ -6,23 +6,24 @@
 
   <mat-menu #menu="matMenu" class="pl-5">
     <button mat-menu-item>
+<!--      Will do later-->
       <span class="text-capitalize">Find Patient</span>
     </button>
 
     <button mat-menu-item routerLink="/patients">
-      <span class="text-capitalize">list all patients</span>
+      <span class="text-capitalize text-info">list all patients</span>
     </button>
 
     <button mat-menu-item routerLink="/addPatient">
-      <span class="text-capitalize">add new patient</span>
+      <span class="text-capitalize text-success">add new patient</span>
     </button>
 
     <button mat-menu-item routerLink="/updateRecords">
-      <span class="text-capitalize">update patient record</span>
+      <span class="text-capitalize text-warning">update patient record</span>
     </button>
 
     <button mat-menu-item routerLink="/deletePatient">
-      <span class="text-capitalize">delete patient record</span>
+      <span class="text-capitalize text-danger">delete patient record</span>
     </button>
   </mat-menu>
 </div>
