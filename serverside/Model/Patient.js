@@ -1,31 +1,35 @@
 const mongoose = require('mongoose');
 
 const Patients = new mongoose.Schema({
-    name: {
+    patient: {
         type: String,
         required: true,
         minLength: 8
     },
-    address: {
+    prescription: {
+      type: String,
+      required: true
+    },
+    dosage: {
+      type: Number,
+      required: true,
+    },
+    usageInterval: {
+      type: Number,
+      required: true,
+    },
+    pharmacy: {
+      type: String,
+      required: true
+    },
+    manufacturer: {
         type: String,
-        required: true,
-        minLength: 10
+        required: true
     },
-    phoneNumber: {
-        type: Number,
-        required: true,
-        minLength: 8
-    },
-    nextOfKin: {
-        type: String,
-        required: true,
-        minLength: 8
-    },
-    numOfNOK: {
-        type: Number,
-        required: true,
-        minlength: 8
+    presidingDoctor: {
+      type: String,
+      required: true
     }
 })
 
-module.exports = mongoose.model('Patients', Patients, 'Patients');
+module.exports = mongoose.model('Prescription', Patients, 'Prescription');
