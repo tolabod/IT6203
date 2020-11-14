@@ -20,7 +20,7 @@ export class PatientsDataComponent implements OnInit {
   // tslint:disable-next-line:typedef
   private getPatients() {
     this.patientService.getPatients().subscribe(
-      data => {this.patients = data},
+      data => {this.patients = data; },
       err => console.log(err),
       () => console.log('finished loading')
     );

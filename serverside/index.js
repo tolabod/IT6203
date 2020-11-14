@@ -117,4 +117,13 @@ app.put('/patients/updatePatient/:id', (req, res, next) => {
   }
 })
 
+app.get('/patients/findPatient/:searchItem', (req, res) => {
+  Patient.find({name: req.params.searchItem})
+    .then(data => res.status(200).json(data))
+    .catch(err => {
+      console.log('Error: ${err}');
+      res.status(500).json(err);
+    });
+})
+
 module.exports = app;

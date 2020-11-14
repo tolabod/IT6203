@@ -49,4 +49,9 @@ export class PatientService {
       });
     location.reload();
   }
+
+  // tslint:disable-next-line:typedef
+  findPatient(searchItem: string) {
+    return this.http.get('http://localhost:3000/patients/findPatient/' + searchItem);
+  }
 }

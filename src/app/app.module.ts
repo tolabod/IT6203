@@ -16,6 +16,7 @@ import {PatientService} from './patient.service';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { PatientUpdateInformtionComponent } from './patient-update-informtion/patient-update-informtion.component';
+import { FindPatientComponent } from './find-patient/find-patient.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PatientUpdateInformtionComponent } from './patient-update-informtion/pa
     AddPatientComponent,
     UpdatePatientRecordComponent,
     DeletePatientComponent,
-    PatientUpdateInformtionComponent
+    PatientUpdateInformtionComponent,
+    FindPatientComponent
   ],
   imports: [
     BrowserModule,
