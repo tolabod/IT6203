@@ -1,33 +1,43 @@
 <!--<p>patient-update-informtion works!</p>-->
 
 <div class="d-flex align-items-center w-100 d-flex">
-  <form class="d-flex flex-column align-items-center w-100" (ngSubmit)="updatePatient()">
+  <form class="d-flex flex-column align-items-center w-100" (ngSubmit)="updatePrescription()">
 
-    <h4 class="h4 text-uppercase mb-4 text-warning font-weight-bold font-italic">Update record</h4>
+    <h4 class="h4 text-uppercase mb-4 text-warning font-weight-bold font-italic">Update Prescription</h4>
 
     <div class="form-group d-flex flex-row w-100 m-auto">
       <div class="d-flex align-items-center w-50 m-auto" style="width: 45% !important;">
-        <input class="form-control" placeholder="Name" type="text" id="name" [(ngModel)]="name" name="name" >
+        <input class="form-control" placeholder="Patient" type="text" id="patient" [(ngModel)]="patient" name="patient" >
       </div>
 
       <div class="d-flex align-items-center m-auto" style="width: 45% !important;">
-        <input class="form-control" placeholder="Address" type="text" id="address" [(ngModel)]="address" name="address">
+        <input class="form-control" placeholder="Prescription" type="text" id="prescription" [(ngModel)]="prescription" name="prescription">
       </div>
     </div>
 
     <div class="form-group d-flex flex-row w-100 mt-5 ml-auto mr-auto mb-auto">
       <div class="d-flex align-items-center w-50 m-auto" style="width: 45% !important;">
-        <input class="form-control" placeholder="Phone Number" id="phoneNumber" type="number" [(ngModel)]="phoneNumber" name="phoneNumber" >
+        <input class="form-control" placeholder="Dosage" id="dosage" type="number" [(ngModel)]="dosage" name="dosage" >
       </div>
 
       <div class="d-flex align-items-center m-auto" style="width: 45% !important;">
-        <input class="form-control" placeholder="Name of Next Of Kin" type="text" id="nextOfKin" [(ngModel)]="nextOfKin" name="nextOfKin" >
+        <input class="form-control" placeholder="Usage Interval" type="number" id="usageInterval" [(ngModel)]="usageInterval" name="usageInterval" >
+      </div>
+    </div>
+
+    <div class="form-group d-flex flex-row w-100 mt-5 ml-auto mr-auto mb-auto">
+      <div class="d-flex align-items-center w-50 m-auto" style="width: 45% !important;">
+        <input class="form-control" placeholder="Pharmacy" id="pharmacy" type="text" [(ngModel)]="pharmacy" name="pharmacy" >
+      </div>
+
+      <div class="d-flex align-items-center m-auto" style="width: 45% !important;">
+        <input class="form-control" placeholder="Manufacturer" type="text" id="manufacturer" [(ngModel)]="manufacturer" name="manufacturer" >
       </div>
     </div>
 
     <div class="form-group d-flex flex-row w-100 m-auto">
       <div class="d-flex align-items-center w-50 m-auto" style="width: 45% !important;">
-        <input class="form-control mt-5" placeholder="Contact of NOK" type="number" id="numOfNOK" [(ngModel)]="numOfNOK" name="numOfNOK">
+        <input class="form-control mt-5" placeholder="Presiding Doctor" type="text" id="presidingDoctor" [(ngModel)]="presidingDoctor" name="presidingDoctor">
       </div>
     </div>
 

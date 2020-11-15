@@ -3,8 +3,8 @@
 <div class="d-flex flex-column w-100">
   <div class="d-flex w-100">
     <nav class="navbar navbar-light bg-light w-100">
-      <form class="form-inline w-100" (submit)="findPatient()">
-        <input class="form-control mr-sm-2" type="search" autocomplete="off" [(ngModel)]="searchPatient" name="searchPatient" placeholder="Find Patient" aria-label="Search">
+      <form class="form-inline w-100" (submit)="findPrescription()">
+        <input class="form-control mr-sm-2" type="search" autocomplete="off" [(ngModel)]="searchPatient" name="searchPatient" placeholder="Find Prescription" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
@@ -12,28 +12,32 @@
 
   <div class="d-flex flex-column">
     <div class="d-flex w-100 align-items-center justify-content-center mb-4">
-      <h4 class="h4 text-uppercase mb-4 text-info font-weight-bold font-italic mt-4">Find Patient</h4>
+      <h4 class="h4 text-uppercase mb-4 text-info font-weight-bold font-italic mt-4">Find Prescription</h4>
     </div>
 
     <table class="table w-100">
       <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col" class="text-capitalize">Fullname</th>
-        <th scope="col" class="text-capitalize">Address</th>
-        <th scope="col" class="text-capitalize">Phone Number</th>
-        <th scope="col" class="text-capitalize">Next of Kin</th>
-        <th scope="col" class="text-capitalize">Number of NOK</th>
+        <th scope="col" class="text-capitalize">Patient</th>
+        <th scope="col" class="text-capitalize">Prescription</th>
+        <th scope="col" class="text-capitalize">Dosage</th>
+        <th scope="col" class="text-capitalize">Interval</th>
+        <th scope="col" class="text-capitalize">Pharmacy</th>
+        <th scope="col" class="text-capitalize">Manufacturer</th>
+        <th scope="col" class="text-capitalize">Doctor</th>
+        <th scope="col" class="text-capitalize">Action</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let patient of patients let i = index">
+      <tr *ngFor="let prescription of patients let i = index">
         <th scope="row">{{i + 1}}</th>
-        <td>{{patient.name}}</td>
-        <td>{{patient.address}}</td>
-        <td>{{patient.phoneNumber}}</td>
-        <td>{{patient.nextOfKin}}</td>
-        <td>{{patient.numOfNOK}}</td>
+        <td>{{prescription.patient}}</td>
+        <td>{{prescription.prescription}}</td>
+        <td>{{prescription.dosage}}</td>
+        <td>{{prescription.usageInterval}}</td>
+        <td>{{prescription.pharmacy}}</td>
+        <td>{{prescription.manufacturer}}</td>
+        <td>{{prescription.presidingDoctor}}</td>
       </tr>
       </tbody>
     </table>

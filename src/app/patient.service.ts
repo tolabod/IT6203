@@ -12,14 +12,14 @@ export class PatientService {
 
   // tslint:disable-next-line:typedef
   getPatients() {
-    return this.http.get('http://localhost:3000/patients/getPatients');
+    return this.http.get('http://localhost:3000/api/v1/prescription/get');
   }
 
 
   // tslint:disable-next-line:typedef max-line-length
-  addPatients(name: string, address: string, phoneNumber: number, nextOfKin: string, numOfNOK: number) {
+  addPrescription(patient: string, prescription: string, dosage: number, usageInterval: number, pharmacy: string, manufacturer: string, presidingDoctor: string) {
     // tslint:disable-next-line:max-line-length
-    this.http.post('http://localhost:3000/patients/addPatient', {name, address, phoneNumber, nextOfKin, numOfNOK})
+    this.http.post('http://localhost:3000/api/v1/prescription/add', {patient, prescription, dosage, usageInterval, pharmacy, manufacturer, presidingDoctor})
       .subscribe((responseData) => {
         console.log(responseData);
       });
@@ -29,21 +29,14 @@ export class PatientService {
 
   // tslint:disable-next-line:typedef
   deletePrescription(prescriptionId: string) {
-    this.http.delete('http://localhost:3000/patients/removePrescription/' + prescriptionId)
+    this.http.delete('http://localhost:3000/api/v1/prescription/delete' + prescriptionId)
       .subscribe(() => console.log(`Deleted: ${prescriptionId}`));
     location.reload();
   }
 
   // tslint:disable-next-line:typedef
-  removePatient(patientId: string) {
-    this.http.delete('http://localhost:3000/patients/removePatient/' + patientId)
-      .subscribe(() => console.log(`Deleted Patient with the ID of ${patientId}`));
-    location.reload();
-  }
-
-  // tslint:disable-next-line:typedef
-  updatePatient(id: string, name: string, address: string, phoneNumber: number, nextOfKin: string, numOfNOK: number) {
-    this.http.put('http://localhost:3000/patients/updatePatient/' + id, {name, address, phoneNumber, nextOfKin, numOfNOK})
+  updatePrescription(id: string, patient: string, prescription: string, dosage: number, usageInterval: number, pharmacy: string, manufacturer: string, presidingDoctor: string) {
+    this.http.put('http://localhost:3000/api/v1/prescription/update/' + id, {patient, prescription, dosage, usageInterval, pharmacy, manufacturer, presidingDoctor})
       .subscribe(() => {
         console.log(`Updated: ${id}`);
       });
@@ -51,7 +44,7 @@ export class PatientService {
   }
 
   // tslint:disable-next-line:typedef
-  findPatient(searchItem: string) {
-    return this.http.get('http://localhost:3000/patients/findPatient/' + searchItem);
+  findPrescription(searchItem: string) {
+    return this.http.get('http://localhost:3000/api/v1/prescription/find/' + searchItem);
   }
 }

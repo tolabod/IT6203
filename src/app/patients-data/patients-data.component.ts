@@ -14,11 +14,11 @@ export class PatientsDataComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    this.getPatients();
+    this.getPrescription();
   }
 
   // tslint:disable-next-line:typedef
-  private getPatients() {
+  private getPrescription() {
     this.patientService.getPatients().subscribe(
       data => {this.patients = data; },
       err => console.log(err),

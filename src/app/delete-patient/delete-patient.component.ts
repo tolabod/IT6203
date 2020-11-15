@@ -28,6 +28,6 @@ export class DeletePatientComponent implements OnInit {
 
   // tslint:disable-next-line:typedef variable-name
   deletePatient(_id: string) {
-    this.patientService.removePatient(_id);
+    this.patientService.deletePrescription(_id);
   }
 }

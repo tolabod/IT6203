@@ -8,12 +8,12 @@ import {PatientUpdateInformtionComponent} from './patient-update-informtion/pati
 import {FindPatientComponent} from './find-patient/find-patient.component';
 
 const routes: Routes = [
-  {path: 'patients', component: PatientsDataComponent},
-  {path: 'addPatient', component: AddPatientComponent},
-  {path: 'updateRecords', component: UpdatePatientRecordComponent},
-  {path: 'deletePatient', component: DeletePatientComponent},
+  {path: 'Prescriptions', component: PatientsDataComponent},
+  {path: 'addPrescriptions', component: AddPatientComponent},
+  {path: 'updatePrescriptions', component: UpdatePatientRecordComponent},
+  {path: 'deletePrescriptions', component: DeletePatientComponent},
   {path: 'updateInformation/:_id', component: PatientUpdateInformtionComponent},
-  {path: 'findPatient', component: FindPatientComponent}
+  {path: 'findPrescription', component: FindPatientComponent}
 ];
 
 @NgModule({

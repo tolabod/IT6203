@@ -1,29 +1,29 @@
 <div>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
-    <span>Menu Options</span>
+    <span>Prescription Menu Options</span>
   </button>
 
   <mat-menu #menu="matMenu" class="pl-5">
-    <button mat-menu-item routerLink="/findPatient">
+    <button mat-menu-item routerLink="/findPrescription">
 <!--      Will do later-->
-      <span class="text-capitalize text-dark">Find Patient</span>
+      <span class="text-capitalize text-dark">Find Prescription</span>
     </button>
 
-    <button mat-menu-item routerLink="/patients">
-      <span class="text-capitalize text-info">list all patients</span>
+    <button mat-menu-item routerLink="/Prescriptions">
+      <span class="text-capitalize text-info">list all Prescription</span>
     </button>
 
-    <button mat-menu-item routerLink="/addPatient">
-      <span class="text-capitalize text-success">add new patient</span>
+    <button mat-menu-item routerLink="/addPrescriptions">
+      <span class="text-capitalize text-success">add new Prescription</span>
     </button>
 
-    <button mat-menu-item routerLink="/updateRecords">
-      <span class="text-capitalize text-warning">update patient record</span>
+    <button mat-menu-item routerLink="/updatePrescriptions">
+      <span class="text-capitalize text-warning">update Prescription</span>
     </button>
 
-    <button mat-menu-item routerLink="/deletePatient">
-      <span class="text-capitalize text-danger">delete patient record</span>
+    <button mat-menu-item routerLink="/deletePrescriptions">
+      <span class="text-capitalize text-danger">delete Prescription</span>
     </button>
   </mat-menu>
 </div>

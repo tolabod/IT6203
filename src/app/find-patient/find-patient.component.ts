@@ -17,8 +17,8 @@ export class FindPatientComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  findPatient() {
-    this.patientService.findPatient(this.searchPatient).subscribe(
+  findPrescription() {
+    this.patientService.findPrescription(this.searchPatient).subscribe(
       data => {this.patients = data; },
       err => console.log(err),
       () => console.log('Search Item Available')

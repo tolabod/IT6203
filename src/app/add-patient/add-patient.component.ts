@@ -11,11 +11,13 @@ export class AddPatientComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   constructor(private _patient: PatientService) { }
 
-  @Input() name: string;
-  @Input() address: string;
-  @Input() phoneNumber: number;
-  @Input() nextOfKin: string;
-  @Input() numOfNOK: number;
+  @Input() patient: string;
+  @Input() prescription: string;
+  @Input() dosage: number;
+  @Input() usageInterval: number;
+  @Input() pharmacy: string;
+  @Input() manufacturer: string;
+  @Input() presidingDoctor: string;
   // tslint:disable-next-line:typedef variable-name
 
 
@@ -23,9 +25,8 @@ export class AddPatientComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  addPatient() {
-    console.log(`name: ${this.name}\naddress: ${this.address}\nphone Number: ${this.phoneNumber}\nNext of Kin: ${this.nextOfKin}\nNOK Number: ${this.numOfNOK}`);
+  addPrescription() {
     // tslint:disable-next-line:max-line-length
-    this._patient.addPatients(this.name, this.address, this.phoneNumber, this.nextOfKin, this.numOfNOK);
+    this._patient.addPrescription(this.patient, this.prescription, this.dosage, this.usageInterval, this.pharmacy, this.manufacturer, this.presidingDoctor);
   }
 }

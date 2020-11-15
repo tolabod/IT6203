@@ -14,11 +14,13 @@ export class PatientUpdateInformtionComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   constructor(private patientService: PatientService, public route: ActivatedRoute, private router: Router) { }
 
-  @Input() name: string;
-  @Input() address: string;
-  @Input() phoneNumber: number;
-  @Input() nextOfKin: string;
-  @Input() numOfNOK: number;
+  @Input() patient: string;
+  @Input() prescription: string;
+  @Input() dosage: number;
+  @Input() usageInterval: number;
+  @Input() pharmacy: string;
+  @Input() manufacturer: string;
+  @Input() presidingDoctor: string;
   // tslint:disable-next-line:typedef variable-name
 
 
@@ -34,9 +36,8 @@ export class PatientUpdateInformtionComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  updatePatient() {
-    console.log(`Information to be Updated \n\nname: ${this.name}\naddress: ${this.address}\nphone Number: ${this.phoneNumber}\nNext of Kin: ${this.nextOfKin}\nNOK Number: ${this.numOfNOK}`);
+  updatePrescription() {
     // tslint:disable-next-line:max-line-length
-    this.patientService.updatePatient(this.id, this.name, this.address, this.phoneNumber, this.nextOfKin, this.numOfNOK);
+    this.patientService.updatePrescription(this.id, this.patient, this.prescription, this.dosage, this.usageInterval, this.pharmacy, this.manufacturer, this.presidingDoctor);
   }
 }
