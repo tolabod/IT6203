@@ -49,6 +49,7 @@ app.get(baseAPI + "get", (req, res) => {
 });
 
 app.delete(baseAPI + 'delete/:id', (req, res, next) => {
+  console.log("AM HERE")
     Patient.deleteOne({ _id: req.params.id })
         .then(result => {
             console.log(result);
