@@ -29,7 +29,7 @@ export class PatientService {
 
   // tslint:disable-next-line:typedef
   deletePrescription(prescriptionId: string) {
-    this.http.delete('http://localhost:3000/api/v1/prescription/delete' + prescriptionId)
+    this.http.delete('http://localhost:3000/api/v1/prescription/delete/' + prescriptionId)
       .subscribe(() => console.log(`Deleted: ${prescriptionId}`));
     location.reload();
   }
